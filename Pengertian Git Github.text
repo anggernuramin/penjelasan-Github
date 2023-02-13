@@ -1,3 +1,11 @@
 VCS (Version Control System) adalah sistem yang menyimpan dan mengelola rekaman perubahan dari source code
 GIT adalah salah satu software yang bisa melakukan VCS
 Github adalah layanan cloud/website untuk mengelola project GIT
+
+Istilah pada Git
+  1. repo folder project kita
+  2. commit = rekaman atau snapsot dari repo kita
+    commit dilakukan stelah kita membuat dan melakukan perubahan pada source code sebelumnya
+  3. hash = penanda unik pada sebuah commit (hash berbentuk string random)
+  4. checkout = berpindah ke sebuah commit
+
