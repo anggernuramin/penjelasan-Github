@@ -8,4 +8,11 @@ Istilah pada Git
     commit dilakukan stelah kita membuat dan melakukan perubahan pada source code sebelumnya
   3. hash = penanda unik pada sebuah commit (hash berbentuk string random)
   4. checkout = berpindah ke sebuah commit
-
+  5. branch = cabang bebas dari sebuah commit
+    Brancing biasanya dilakukan saat
+    - Membuat git branch
+    - Membuat snapshot(perubahan source code) tanpa mengganggu jalur utama(branch master)
+    - Fitur experimental
+    - 2 orang mengerjakan repo yang sama  
+  6. Merge
+    Menggabungkan commit dari branch kembali ke branch master
