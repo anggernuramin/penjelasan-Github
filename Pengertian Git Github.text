@@ -16,3 +16,9 @@ Istilah pada Git
     - 2 orang mengerjakan repo yang sama  
   6. Merge
     Menggabungkan commit dari branch kembali ke branch master
+   Recap Materi Branc da Merge
+    - Branch = jalur development bebas dari sebuah commit (percabangan)
+    - Checkout = berpindah ke branch / commit yang lain
+    - pull request = meminta pemilik repo untuk MENGAMBIL perubahan yang telah kita lakukan
+    - Merge = menggabungkan 2 buah branch 
+    - Merge conflict = muncul saat baris yang sama diubah oleh 2 branch yg berbeda,kita harus solving memilih salah satu perubahannya
