@@ -2,7 +2,7 @@ VCS (Version Control System) adalah sistem yang menyimpan dan mengelola rekaman 
 GIT adalah salah satu software yang bisa melakukan VCS
 Github adalah layanan cloud/website untuk mengelola project GIT
 
-Istilah pada Git
+A. Istilah pada Git
   1. repo folder project kita
   2. commit = rekaman atau snapsot dari repo kita
     commit dilakukan stelah kita membuat dan melakukan perubahan pada source code sebelumnya
@@ -22,3 +22,10 @@ Istilah pada Git
     - pull request = meminta pemilik repo untuk MENGAMBIL perubahan yang telah kita lakukan
     - Merge = menggabungkan 2 buah branch 
     - Merge conflict = muncul saat baris yang sama diubah oleh 2 branch yg berbeda,kita harus solving memilih salah satu perubahannya
+B. FORK/Forking
+    - membuat copy/duplikat dari repo orang lain(beserta historinya)
+    - jembatan antara repo original dan duplikatnya
+    - modifikasi terhadap repo original milik orang lain yang kita gunakan,tanpa mengganggu/mengganti repo originalnya
+    - Berkontribusi terhadap repo orang lain (pull request)
+    - Fork tdak sama dengan Clone
+    
