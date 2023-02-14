@@ -29,3 +29,38 @@ B. FORK/Forking
     - Berkontribusi terhadap repo orang lain (pull request)
     - Fork tdak sama dengan Clone
     
+ BEKERJA DENGAN GIT
+  Perintah yang ada di gitbash
+  1. git = memberikan rangkuman perintah/perintah yg ada di gitbash(githelp)
+  2. clear = akan menghilangkan isi dari terminal
+  3. git --version = untuk mengetahui versi git
+    A. git commend local
+    1. git init = digunakan untuk mengisialisasi repo git pada computer kita
+    2. git add namaFile = untuk menambahka file ke staging area
+    3. git status = untuk mengetahui status repo kita (misal ada filebaru atau tidak,file terhapus dll)
+    4. git commit = untuk melakuka commit
+    5. git connfig = untuk configurasi pada git 
+    6. git branch =  untuk membuat branch
+    7. git rm --cached = untuk merove file saat stagging area dan tidak jadi commit
+    8. git commit -m"pesan commit"
+    9. git log = untuk melihat history comit yang pernah kita lakukan
+    10. git log -3 = untuk melihat 3 history commit terakhir
+    11.  git log -- namaFile = untuk melhat perubahan secara spesifik pd file tertentu
+    12. git checkout kodeHash5digit -- namafile = untuk mengembalikan perubahan commit ,misal file yg terhapus 
+        misal git checkout 1b23v -- style.css ,Dan hasilnya akan ke staging area ,kita perlu commit 
+  4. pwd = untuk mengetahui anda berada diderectory mana
+      - untuk membuat folder menjadi repo git kita perlu masuk kedalam foldernya 
+      - untuk mengethui didalam folder ada file apa saja gunakan perintas ls
+      - masuk folder dengan, cd namaFolder
+      - setelah masuk folder,maka perintah git init untuk menjadikan folder local menjadi git repo
+      - jika berhasil maka akan muncul brand (master)
+      - buka folder didalam text editor
+      - membuat file (html,css,js,dll)
+      - supaya git mengenali perubahan source code yg ada didalam repo,kita perlu melakukan
+        1. ketik git status untuk mngetahui ada perubahan file apa saja
+        2. tambahkan file ke staging area,dengan ketik add file namaFile atau bisa saja dengan add file . (semua file yg akan kita tambahkan ke stagging area)
+        3. jika kita sudah terdaftar maka kita bisa commit,jikabelum kita perlu memasukkan name dan email menggunakan perintah git commit
+        4. git commit -m"beri keterangan commit"
+        5. untuk mengetahui commit kita berhasil atau tidak,ketik git status jika keterangan NOTHING TO COMMIT,WORKING TREE CLEAN ,maka artinya commit berhasil
+        6. lakukan langkah 1 - 5 untuk setiap melakukan commit
+        
