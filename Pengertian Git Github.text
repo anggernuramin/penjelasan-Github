@@ -110,6 +110,52 @@ B. MELAKUKAN BRANCH DAN MERGE PADA GIT
     9. jika ingin menyimpan perubahannya,maka anda harus membuat branch baru untuk menyimpan perubahan dan saat melakukan perubahan branch
         anda akan mendapatkan hash untuk menambahkan pada akhir branch,jika file yang anda rubah mengerjakan baris yang sama terhdap brand master akan 
         menjadi merge conflict,anda harus resolve manual
+        
+C. GIT REMOTE
+perintah yg abisa digunakan
+    - git clone namaUrl = untuk mengarahkan folder tersebut aka mengeclone sesuai dengan namaUrl yg ada di github
+    - git remote = untuk mengetahui apakah sudah terhubung dengan repo yg ada digithub ,jika keterangan ORIGIN maka sudah terhubung
+    - git remote -v = untuk mngetahui data lebih detail
+    - git push = untuk mendorong branch,biasa dilakukan untuk mendorong branck remote agar sejajar dengan branch local,saat branch local mengalamai perubahan
+    - git fetch = untuk mengetahui perubahan apa saja yg ada diremote
+    - git pull = untuk mengambil perubahan yg ada diremote agar dilocal ikut berubah
+    
+    aRTINYA REPO KITA DISIMPAN KEDALAM GITHUB 
+    jika kita menggunakan git remote artinya kita menduplikat repo kita dan disimpan kedalam github ataupun sebaliknya
+    1. KETIKA PADA GITHUB KITA SUDAH MEMPUNYAI REPO,DAN DI KOMPUTER LOCAL KITA BELUM MEMPUNYAI,Maka kita dapat menduplikat repo yang ada digithub dengan cara (Cloning)
+    - memuat repo baru pd github
+    - pastikan click readme
+    - click clone or download
+    - pilih yang https copy url nya
+    - pilih folder / buat folder di komputer local untuk menyimpan hasil cloning dari repo yang ada digithub
+    - git clone namaUrl  artinya repo yg ada digithub kita cloning (membuat kemabaran)
+    - buka file di code editor
+    - masuk ke folder sesuai yg ada di repo github
+    - git remote (untuk mngetahui apakah sudah berhasil clone repo yg ada di github)
+    - cek git status ,jika berhasil maka akan menampilkan keteranga UP TO DATE yg artinya branch local sama dengan branch oringin/master(beranch yg ada diremote)
+    - jik pada local melakukan perubahan / commit
+    - cek git status untuk mngetahui apakah branch pada local atau pd remote sudah sejajar
+    - jika belum pd local ketik git push untuk mendorong agar branch yg da diremote sejajar dengan branch local
+    - cek status dan graph untuk emmantau perubahan ,dan refresh github
+    
+2. KETIKA KITA PUNYA REPO DILOCAL DAN KITA INGIN COMMIT DAN MASUKKAN REPO KE DALAM GITHUB (Remote)
+- buat folde di local dan jadikan repo 
+- buat repo di github 
+- pastikan jangan diclick readme nya
+- sesuaikan dengan quick setup
+- menambahkan remote ke gitbash (sudah ada di quick tip)
+- lakukan git fetch untuk mengecek perubahan yg ada di remote
+
+3. KETIKA TERJADI CONFLICK LOCAL DAN REMOTE
+    Terjadi jika pada local dan remote melakuka perubahan dibaris yang sama
+   - gunakan git fetch untuk mengetahui sudah sampai mana commit yg ada di remote
+   - git status untuk mengetahui keterangan
+   - git pull untuk menarik perubahan yg ada diremote ke local
+   - jika tdk dipull maka pada graph akan melakukan branch,
+   - setelah conflick selesai maka gunakan perintah git push agar branch local dan remote sejajar
+   
+   
+    
     
   
     
