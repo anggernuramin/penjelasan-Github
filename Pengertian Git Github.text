@@ -2,6 +2,8 @@ VCS (Version Control System) adalah sistem yang menyimpan dan mengelola rekaman 
 GIT adalah salah satu software yang bisa melakukan VCS
 Github adalah layanan cloud/website untuk mengelola project GIT
 
+FILE yag disimpan dalam github max 500mb
+
 A. Istilah pada Git
   1. repo folder project kita
   2. commit = rekaman atau snapsot dari repo kita
@@ -154,6 +156,15 @@ perintah yg abisa digunakan
    - jika tdk dipull maka pada graph akan melakukan branch,
    - setelah conflick selesai maka gunakan perintah git push agar branch local dan remote sejajar
    
+ D. GITHUB PAGES
+    Memanfaatkan github untuk menghosting web statis (web yg tdk memilik data base)
+  1. buat repo pada github
+  2. pada saat membuat repo dibelakang harus diberi nama github.io
+  3. tdk usah click readme
+  4. buat repo pd local untuk remote repo yg ada digithub
+  5. check pd github, bagian setting pilih fitur pages ,lalu ubah none menjadi master/main lalu save ,refresh, maka github akan menampilkan url hostingnya 
+  6. Dan jika ingin melakukan perubahan maka,kita commit ke local lalu ketik git push ,agarrepo yg ada digithub akan ikut berubah
+  
    
     
     
