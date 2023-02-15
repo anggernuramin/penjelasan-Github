@@ -48,6 +48,7 @@ B. FORK/Forking
     11.  git log -- namaFile = untuk melhat perubahan secara spesifik pd file tertentu
     12. git checkout kodeHash5digit -- namafile = untuk mengembalikan perubahan commit ,misal file yg terhapus 
         misal git checkout 1b23v -- style.css ,Dan hasilnya akan ke staging area ,kita perlu commit 
+     13. q = untuk quit ,digunakan setelah melkaukan perintah git log
   4. pwd = untuk mengetahui anda berada diderectory mana
       - untuk membuat folder menjadi repo git kita perlu masuk kedalam foldernya 
       - untuk mengethui didalam folder ada file apa saja gunakan perintas ls
@@ -63,6 +64,8 @@ B. FORK/Forking
         4. git commit -m"beri keterangan commit"
         5. untuk mengetahui commit kita berhasil atau tidak,ketik git status jika keterangan NOTHING TO COMMIT,WORKING TREE CLEAN ,maka artinya commit berhasil
         6. lakukan langkah 1 - 5 untuk setiap melakukan commit
+        7. jika git status modified bukan untracked gita bisa langsung commit dengan menggunakan perintah
+        git commit -am"penjelasan commit"
         
 B. MELAKUKAN BRANCH DAN MERGE PADA GIT
     perintah yang dapat digunakan pada gitbash
@@ -87,5 +90,23 @@ B. MELAKUKAN BRANCH DAN MERGE PADA GIT
     6. jika ingin berpindah maka kita MERGE
     7. untuk melakukan MERGE ,pastikan kita berada pada branch MASTER
     8. ketik perintah git merge namaBranch
+    
+    MENGATASI GIT MERGE CONFLICT
+      Terjadi karena 2 branch mengerjakan baris yang sama dalam 1 repo,jika pada branch melakukan perubahan pada baris yang sama,maka akan terjadi conflick,jika tidak maka data akan update
+     cara mengatasi
+     1. kita bisa memilih bagian mana saja yang aka kita ambil
+     2. yang warna hijau adalah branch yg aktif,sedangkan yg warna biru adalah branch yg akan dimerge
+     3. lakukan commit agar masuk ke staging area
+     
+   MELAKUKAN CHECKOUT KE SEBUAH COMMIT
+    1. Dilakuka untuk mundur beberapa commit
+    2. lakukan git log untuk mengetahui hash pd saat commit
+    3. ambil hast 7 digit pd commit yg kita ingin masuki
+    4. git checkout hast7digit
+    5. artinya head akan lepas pd branch,dan head akan mengacu pada commit yg mempunyai hast7digit pd saat kita melakukan git checkout
+    6. dalam keadaan ini kita bisa membuat branch baru,mengedit isi file dll
+    7. jikakita ingin membuat branch baru maka kita perlu melakukan,membuat branch baru da masuk denga perintahgit checkout brancBaru
+    8 . untuk kembali ke posisi semula maka gunakang git branch master
+    
   
     
