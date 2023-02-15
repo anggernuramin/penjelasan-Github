@@ -64,3 +64,28 @@ B. FORK/Forking
         5. untuk mengetahui commit kita berhasil atau tidak,ketik git status jika keterangan NOTHING TO COMMIT,WORKING TREE CLEAN ,maka artinya commit berhasil
         6. lakukan langkah 1 - 5 untuk setiap melakukan commit
         
+B. MELAKUKAN BRANCH DAN MERGE PADA GIT
+    perintah yang dapat digunakan pada gitbash
+    1. git branch = untuk menengetahui terdapat branch apa saja pd git
+    2. git brach namaBranch = untuk membuat branch baru (misal git branch dosen) artinya kita emaut branch dosen.
+    3.git checkout namaBranch = untuk berpindah branch (misal gitcheckout dosen) artinya kita kan berpindah ke branch dosen.
+    4. git log --all --decorate --oneline --graph = untuk melihat history dalam bentuk graph
+    5. alias = untuk membuat perintah kita sendiri yang isinya didalam adalah perintah bawaan dari gitbash,misal saat kita ingin melihat graph kita harus mengetik perintah yg lumayan panjang,kita bisa membuat perintah dengan kata kita sendiri dengan : 
+    alias graph="git log --all --decorate --oneline --graph" untuk memanggil kita ketik graph
+    6. git merge namaBranch = untuk menggabungkan branch
+    7. git branch --merged = untuk mengetahui branch apa saja yang telah dimerge(digabung)
+    8. git branch -d namaBranch = untuk menghapus branch yg telah dimerge dan tidak digunakan lagi
+    9. git branch -D namaBranch = untuk menghapus branch
+    
+    membuat BRANCH dan MERGE
+    branch yg aktif ditandai dengan adanya tulisan HEAD
+    1. membuatt repo
+    2. membuat branch baru
+    3. masuk branch baru dengan perintah git checkout namabranch
+    4. edit branch baru sesuai dengan kebutuhan
+    5. ingat jika berpindah ke branch master isi dari branch baru tidak akan ikut berpindah
+    6. jika ingin berpindah maka kita MERGE
+    7. untuk melakukan MERGE ,pastikan kita berada pada branch MASTER
+    8. ketik perintah git merge namaBranch
+  
+    
