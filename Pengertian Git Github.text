@@ -107,6 +107,9 @@ B. MELAKUKAN BRANCH DAN MERGE PADA GIT
     6. dalam keadaan ini kita bisa membuat branch baru,mengedit isi file dll
     7. jikakita ingin membuat branch baru maka kita perlu melakukan,membuat branch baru da masuk denga perintahgit checkout brancBaru
     8 . untuk kembali ke posisi semula maka gunakang git branch master
+    9. jika ingin menyimpan perubahannya,maka anda harus membuat branch baru untuk menyimpan perubahan dan saat melakukan perubahan branch
+        anda akan mendapatkan hash untuk menambahkan pada akhir branch,jika file yang anda rubah mengerjakan baris yang sama terhdap brand master akan 
+        menjadi merge conflict,anda harus resolve manual
     
   
     
