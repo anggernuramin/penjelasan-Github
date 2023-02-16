@@ -213,8 +213,9 @@ perintah yg bisa digunakan
           - pindah branch, git checkout namaBrancBaru
           - lakukan perubahan-perubahan atau menambah file pd branch namaBranchBaru
           - dengan melakukan perubahan,maka repo yg ada dilocal maju satu commit
-          - agar repo yg ada dilocal juga maju 1 commit,
-          - git push origin namaBrancBaru, karena kita membuat branch baru,kita tidak push ke branch master (jika berhasil maka di github akan muncul button pull request), setelah itu
+          - agar repo yg ada digithub juga maju 1 commit,
+          - git push origin namaBrancBaru,origin akan mengacu repo yg ada digithub (karena remote yg ada digithub bernma origin) 
+            karena kita membuat branch baru,kita tidak push ke branch master (jika berhasil maka di github akan muncul button pull request), setelah itu
           - kita usulkan perubahan yg ada di brachBaru ke repo sumber
           - lakukan pull request menggunakan github,karena pull request adalah fitur yg dimiliki oleh github
           - pindah branchBaru,lakuka pull request
@@ -222,5 +223,5 @@ perintah yg bisa digunakan
           - kita fetch namaRemotePemilikRepoSumber , untuk mengetahui apakah diterima atau tidak pengajuan pull request kita
           - jika diseteujui,kita pindah ke branch master
           - lalu lakukan git merge namaRemoteRepoSumber/master, maka repo local kita akan update sesuai dengan repo sumber
-          - ketik git pus origin master, agar repo yang ada digithub update sesuai dengan repo local ata repo sumber
+          - ketik git push origin master, agar repo yang ada digithub update sesuai dengan repo local ata repo sumber
     
