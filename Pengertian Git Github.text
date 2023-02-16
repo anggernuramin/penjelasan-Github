@@ -122,8 +122,11 @@ perintah yg bisa digunakan
     - git fetch = untuk mengetahui perubahan apa saja yg ada diremote
     - git pull = untuk mengambil perubahan yg ada diremote agar dilocal ikut berubah
     
-   MELAKUKAN REMOTE
-      - Buat folder 
+   MELAKUKAN CLONE
+      - Buat folder untuk menampung repo (folder penampung jngan dibuat repo)
+      - masuk kedalam repo yg telah diclone
+      - 
+      - 
     
     aRTINYA REPO KITA DISIMPAN KEDALAM GITHUB 
     jika kita menggunakan git remote artinya kita menduplikat repo kita dan disimpan kedalam github ataupun sebaliknya
@@ -169,8 +172,31 @@ perintah yg bisa digunakan
   6. Dan jika ingin melakukan perubahan maka,kita commit ke local lalu ketik git push ,agarrepo yg ada digithub akan ikut berubah
   
  F. REMOTE MULTIPLE
-      Digunakan untuk kolaborasi team
-   
+      Biasa digunakan untuk kolaborasi team,Agar repo yg ada digithub dilocal dan digithub orang lain yg reponya kita fork sinkron (berintegrasi)
+      Misal kasus kita ingin mnengambil repo  orang lain(fork) dan clone ke komputer kita (local) dan di akun github kita
+      BERLAKU JIKA REPO SUMBER MELAKUKAN PERUBAHAN,MAKA OTOMATIS REMOTE AKAN MAJU 1 COMMIT DARI REPO LOCAL DAN GITHUB KITA
+      - lakukan fork untuk mengambil repo orng lain dan clone ke akun github kita
+      - pada local buat  folder (folder saja jngan dibuat repo)
+      - ketik git clone urlNamaRepoYgAdaDiGithubKita hasil dari fork
+      - setelah file terdownload,ketik ls untuk mengetahui isi folder
+      - masuk ke repo cd namaRepo (jika masuk berhasil maka akan masuk ke repo dengan branch master)
+      - jika clone berhasil,maka kita cek remote terlebih dahulu
+      - ketik git remote , jika remotenya origin maka clone berhasil,karena jika kita clone maka remote secara default kita adalah origin,dan remote mengacu pd akun  github kita
+      - ketik git remote -v ,aka mengecek remotenya connect ke akun siapa
+      - dan artinya jikakita melakukan perubahan di local ,maka yg akan berubah hnya repo yg ada digithub kita saja,repo aslinya tdk akan berubah
+      - JIKA KITA INGIN UP TO DATE DENGAN REPO ASLINYA ( artinya jika repo sumber berubah,repo yg ada digithub dan local kita ikut berubah) kita harus
+      - membuat remote yg urlnya ditujukan kepada url repo yg kita fork (repo sumbernya)
+      - ketil git remote add namaRemoteSumber(nama terserah) urlRemoteSumber (copas pd github)
+      - cek git remote -v , untuk mngetahui remote ke mana saja
+      - ketik git fetch namaRemoteSumber untuk mngetahui history commit dari akun sumbernya ,dan agar saat kita graph branch sejajar
+      - jika pd repo sumber berubah dan pada repo github ataupun local kita juga ikut berubah,maka gita harus merge git local kita ke git repo sumber (lakukan git fetch namaRemoteSumber untuk mengecek perubahan yg ada direpo sumber)
+      - lalu ketik git status untuk mngetahui pesan
+      - jika ada perubahan di repo sumber,maka git remote akan berada diatas remote local da github
+      - jika ingin remote sejajar, maka 
+      - git merge namaRemoteSumber/master (artinya kita akan menggabungkan remote yg ada dilocal dengan remote yg mengacu repo sumber) 
+      - local ditandai dengan namaBranch(master) saja, tidak ada nama remotenya
+      - agar repo yg ada digithub kita ikut berubah maka kita 
+      - ketik git push -u origin master 
     
     
   
