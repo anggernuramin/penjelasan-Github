@@ -40,9 +40,9 @@ B. FORK/Forking
     1. git init = digunakan untuk mengisialisasi repo git pada computer kita
     2. git add namaFile = untuk menambahka file ke staging area
     3. git status = untuk mengetahui status repo kita (misal ada filebaru atau tidak,file terhapus dll)
-    4. git commit = untuk melakuka commit
-    5. git connfig = untuk configurasi pada git 
-    6. git branch =  untuk membuat branch
+    4. git commit -m= untuk melakuka commit
+    5. git config = untuk configurasi pada git 
+    6. git branch namaBranch=  untuk membuat branch
     7. git rm --cached = untuk merove file saat stagging area dan tidak jadi commit
     8. git commit -m"pesan commit"
     9. git log = untuk melihat history comit yang pernah kita lakukan
@@ -114,13 +114,16 @@ B. MELAKUKAN BRANCH DAN MERGE PADA GIT
         menjadi merge conflict,anda harus resolve manual
         
 C. GIT REMOTE
-perintah yg abisa digunakan
+perintah yg bisa digunakan
     - git clone namaUrl = untuk mengarahkan folder tersebut aka mengeclone sesuai dengan namaUrl yg ada di github
     - git remote = untuk mengetahui apakah sudah terhubung dengan repo yg ada digithub ,jika keterangan ORIGIN maka sudah terhubung
-    - git remote -v = untuk mngetahui data lebih detail
+    - git remote -v = untuk mngetahui remote kita terhubung dengan akun repo github siapa
     - git push = untuk mendorong branch,biasa dilakukan untuk mendorong branck remote agar sejajar dengan branch local,saat branch local mengalamai perubahan
     - git fetch = untuk mengetahui perubahan apa saja yg ada diremote
     - git pull = untuk mengambil perubahan yg ada diremote agar dilocal ikut berubah
+    
+   MELAKUKAN REMOTE
+      - Buat folder 
     
     aRTINYA REPO KITA DISIMPAN KEDALAM GITHUB 
     jika kita menggunakan git remote artinya kita menduplikat repo kita dan disimpan kedalam github ataupun sebaliknya
@@ -165,6 +168,8 @@ perintah yg abisa digunakan
   5. check pd github, bagian setting pilih fitur pages ,lalu ubah none menjadi master/main lalu save ,refresh, maka github akan menampilkan url hostingnya 
   6. Dan jika ingin melakukan perubahan maka,kita commit ke local lalu ketik git push ,agarrepo yg ada digithub akan ikut berubah
   
+ F. REMOTE MULTIPLE
+      Digunakan untuk kolaborasi team
    
     
     
