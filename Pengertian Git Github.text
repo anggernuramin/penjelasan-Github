@@ -198,6 +198,14 @@ perintah yg bisa digunakan
       - agar repo yg ada digithub kita ikut berubah maka kita 
       - ketik git push -u origin master 
     
-    
+    G. JIKA YANG MENJADI REMOTE ADALAH REPO YANG ADA DIGITHUB KITA
+          - maka jika kita ingin mengecek perubahan yg ada pd repo github
+          ketik git fetch
+          - jika DIDALAM REPO GITHUB melakukan perubahan maka,kita harus
+          - ketik git pull,agar repo local kita maju,agar sejajar
+          - DAN JIKAKITA MELAKUKA PERUBAHAN YANG ADA DILOCAL
+          - ketik git push ,agar repo yg ada digithub ikut berubah
+          
+    H. 
   
     
