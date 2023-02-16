@@ -206,6 +206,21 @@ perintah yg bisa digunakan
           - DAN JIKAKITA MELAKUKA PERUBAHAN YANG ADA DILOCAL
           - ketik git push ,agar repo yg ada digithub ikut berubah
           
-    H. 
-  
+    H. PULL REQUEST
+          Biasa dilakukan jikakita melakukan perubahan repo hasil fork dari repo orang lain,dan kita ingin mengajukan perubahan yg ada direpo local atau github kita ke repo sumber
+          JIKA kita ingin melakukan perubahan pada repo hasil fork,MAKA kita jngan melakukan perubahan pada branch master,kita mengubah dibranch lain,agar branch master kita tetap utuh,dan jika perubahan kita  sudah fiks ingin dimasukkan ke branch master maka gunakan git merge dan kita melakukan pull request menggunakan branch lain yg telah kita buat(agar isi dr branch master utuh)
+          - buat branch baru , git branch namaBranchBaru
+          - pindah branch, git checkout namaBrancBaru
+          - lakukan perubahan-perubahan atau menambah file pd branch namaBranchBaru
+          - dengan melakukan perubahan,maka repo yg ada dilocal maju satu commit
+          - agar repo yg ada dilocal juga maju 1 commit,
+          - git push origin namaBrancBaru, karena kita membuat branch baru,kita tidak push ke branch master (jika berhasil maka di github akan muncul button pull request), setelah itu
+          - kita usulkan perubahan yg ada di brachBaru ke repo sumber
+          - lakukan pull request menggunakan github,karena pull request adalah fitur yg dimiliki oleh github
+          - pindah branchBaru,lakuka pull request
+          - dan jika perubahan kita disetujui oleh pemilik repo master
+          - kita fetch namaRemotePemilikRepoSumber , untuk mengetahui apakah diterima atau tidak pengajuan pull request kita
+          - jika diseteujui,kita pindah ke branch master
+          - lalu lakukan git merge namaRemoteRepoSumber/master, maka repo local kita akan update sesuai dengan repo sumber
+          - ketik git pus origin master, agar repo yang ada digithub update sesuai dengan repo local ata repo sumber
     
