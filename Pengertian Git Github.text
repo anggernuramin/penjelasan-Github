@@ -224,4 +224,24 @@ perintah yg bisa digunakan
           - jika diseteujui,kita pindah ke branch master
           - lalu lakukan git merge namaRemoteRepoSumber/master, maka repo local kita akan update sesuai dengan repo sumber
           - ketik git push origin master, agar repo yang ada digithub update sesuai dengan repo local ata repo sumber
+          
+ I . GITIGNORE
+    gitignore adlah sebuah file yg bisa kita simpan kedalam repo kita (local maupun remote(menggunakan github)) agar kedepannya,saat kita melakukan add dan commit(perubahan source code) ,ada file yg kita daftarkan ke file.gitignore agar saat melakuka commit ataupun add file yg telah didaftarka ke .gitignore tidak ikut berubah
+  misal
+     - agar file system tdk ikut berubah jika kita melakukan add dan commit
+     - didalam repo kita terdapat konfigurasi pd local (komputer kita),
+  CARA MEMBUAT FILE GITIGNORE SECARA MANUAL
+   - kita buat dilocal 
+   - di vs code buat file .gitignore
+   - didalmnya kita bisa mendaftarkan file,folder
+   - jika file (namafile.ekstensi)
+   - jik folder (namfolder/)
+   - atau jika semua file dan ekstensi (*.namaekstensi)
+   
+   CARA MEMBUAT FILE GITIGNORE PD GITHUB
+    - kita bisa membuat langsung digithub,saat kita membuat repo pd github
+    
+   - website referensi file gitignore diisi apa (github.com/github/gitignore)
+   (gitignore.io) sesuaikan dengan framework yg kita pakai
+        
     
