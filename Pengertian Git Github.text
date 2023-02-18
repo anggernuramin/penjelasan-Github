@@ -237,6 +237,7 @@ perintah yg bisa digunakan
    - jika file (namafile.ekstensi)
    - jik folder (namfolder/)
    - atau jika semua file dan ekstensi (*.namaekstensi)
+   - setelah kita membuat file .gitignore maka file yg didaftarkan ke dala file .gitignore tdk akan muncul diremote (repo github)
    
    CARA MEMBUAT FILE GITIGNORE PD GITHUB
     - kita bisa membuat langsung digithub,saat kita membuat repo pd github
