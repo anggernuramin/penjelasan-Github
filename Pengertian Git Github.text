@@ -2,10 +2,26 @@ VCS (Version Control System) adalah sistem yang menyimpan dan mengelola rekaman 
 GIT adalah salah satu software yang bisa melakukan VCS
 Github adalah layanan cloud/website untuk mengelola project GIT
 
+Three State pd git
+1. modified = kita mengubah,menambah,mengedit,menghapus file,namun belum kita tambahkan ke repo
+2. staged = menandai file yg telah kita modifikasi dan akan kita simpan ke dalam repo secara permanent (git add .)
+3. commited = data sudah aman disimpan ke dalam repo (git commit -m "")
+
+HEAD
+ - Merupakan pointer menuju hash yg paling akhir (perubahan yg pling akhir)
+ - karena kdang sangat menyulitkan jika harus menuliskan hash value,jika kita akan menuju hash yg paling baru,kita bisa gunakan HEAD
+ 
+DELETE FILE
+  - Delete langsung pd local
+  - mka jika git status maka otomatis akan melakukan perubahan
+  - lakukan git add .
+  - git commit -m ""
+  - untuk konfirmasi/memberitahu pd repo
+
 FILE yag disimpan dalam github max 500mb
 
 A. Istilah pada Git
-  1. repo folder project kita
+  1. repo folder project kita 
   2. commit = rekaman atau snapsot dari repo kita
     commit dilakukan stelah kita membuat dan melakukan perubahan pada source code sebelumnya
   3. hash = penanda unik pada sebuah commit (hash berbentuk string random)
@@ -46,11 +62,24 @@ B. FORK/Forking
     7. git rm --cached = untuk merove file saat stagging area dan tidak jadi commit
     8. git commit -m"pesan commit"
     9. git log = untuk melihat history comit yang pernah kita lakukan
+    9a. git log --oneline = untuk melihat history teteapi ditampilka secara simpel didalam satu baris
     10. git log -3 = untuk melihat 3 history commit terakhir
     11.  git log -- namaFile = untuk melhat perubahan secara spesifik pd file tertentu
     12. git checkout kodeHash5digit -- namafile = untuk mengembalikan perubahan commit ,misal file yg terhapus 
         misal git checkout 1b23v -- style.css ,Dan hasilnya akan ke staging area ,kita perlu commit 
      13. q = untuk quit ,digunakan setelah melkaukan perintah git log
+     14. git config --list --show-origin = digunakan untuk mnegecek ada konfigurasi apa saja pd git
+     15. git diff = digunakan untuk mengetahui perubahan file dalam suatu repo
+     16. git clean -f = digunaka untuk menghapus penambahan file pd working area (hasilnya file akan dihapus)
+     17. git restore namfile = digunakan untuk membatalkan perubahan pd file dan digunakan untuk membatalkan saat menghapus file (posisi file masih berada di working area)
+     18. git restore --staged namafile = digunakan untuk memindahkan file yg di staging area ke working area (digunakan biasanya saat kita tdk jadi menghapus file
+          dan mengubah file,kita hnya dapat mengubah di working area,jika kita terlanjut menambahkan ke staging area,maka gunakan perintah ini untuk kembali ke working area)
+     19. git alias graph="git log --all --decorate --oneline --graph" = digunakan untuk membuat alias perintah grap (perintah graph untuk melihatkan hubungan commit sebelum dan sesudahnya)
+     20. git show hash7Digit = digunakan untuk melihat detail,kita melakuka perubahan apa dalam file tersebut 
+      
+     
+     
+     
   4. pwd = untuk mengetahui anda berada diderectory mana
       - untuk membuat folder menjadi repo git kita perlu masuk kedalam foldernya 
       - untuk mengethui didalam folder ada file apa saja gunakan perintas ls
@@ -124,8 +153,11 @@ perintah yg bisa digunakan
     
    MELAKUKAN CLONE
       - Buat folder untuk menampung repo (folder penampung jngan dibuat repo)
+      - git clone urlRepoGitYgAdaDiGithub
       - masuk kedalam repo yg telah diclone
-      - 
+      - jika ingin mengedit repo,pastikan kita membuatbranch baru untuk melakukan perubahan
+      - jika perubahan sudah fiks untuk digunakan,maka gunakan git merge
+      - lakukan git push -u origin untuk melakukan perubahan repo yg ada digithub
       - 
     
     aRTINYA REPO KITA DISIMPAN KEDALAM GITHUB 
