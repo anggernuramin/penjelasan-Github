@@ -7,18 +7,18 @@ Three State pd git
 2. staged = menandai file yg telah kita modifikasi dan akan kita simpan ke dalam repo secara permanent (git add .)
 3. commited = data sudah aman disimpan ke dalam repo (git commit -m "")
 
-HEAD
+1. HEAD
  - Merupakan pointer menuju hash yg paling akhir (perubahan yg pling akhir)
  - karena kdang sangat menyulitkan jika harus menuliskan hash value,jika kita akan menuju hash yg paling baru,kita bisa gunakan HEAD
  
-DELETE FILE
+2. DELETE FILE
   - Delete langsung pd local
   - mka jika git status maka otomatis akan melakukan perubahan
   - lakukan git add .
   - git commit -m ""
   - untuk konfirmasi/memberitahu pd repo
 
-AMEND COMMIT
+3. AMEND COMMIT
  - kadang saat kita melkukan commit,ada beberapa hal yg terlupakan
  - biasanya kita melakukan reset soft ke commit,lalu tambahka perubahan yg terlupakan,lalu commit ulang
  - Hal tersebut bisa dilakukan tanpa manual melakukan reset,caranya bisa menggunakan 
@@ -26,7 +26,7 @@ AMEND COMMIT
  - perintah diatas akan mengubah commit sebelumnya,tidak membuat commit baru melainkan mengubah 
  - amend akan mengubah hast commit karena data perubahan yg dicommit berubah
  
- VERSI SEBELUMNYA
+ 4. VERSI SEBELUMNYA
  - Git memiliki fitur dimana kita bisa melihat versi file pd commit sebelumnya
  - saat kita ambil versi file sebelumnya,file pd commit tersebut akan berada di staging index
  - untuk melakukan kita bisa gunakan
@@ -35,7 +35,7 @@ AMEND COMMIT
  - jika tdk dan ingin kembali git restore --staged namafile (kita pindah ke working area terlebih dahulu)
  - git restore namafile
  
- SNAPSHOT SEBELUMNYA
+ 5. SNAPSHOT SEBELUMNYA
  - Git juga memiliki fitur seperti mesin waktu,dimana kita bisa kembali pd snapshot sebelumnya
  - kita bisa tentukan kemana tujuan snapshot kita,dengan menggunakan hash commit
  - gunakan oerintah
@@ -43,20 +43,20 @@ AMEND COMMIT
  - jika ingin menambahkan perubahan gunakan git add . dan git commit -m ""
  - Dan jika ingin kembali ke commit paling awal,kita bisa gunakan perintah git checkout namabranch
  
- REVERT COMMIT
+6. REVERT COMMIT
  - Git memiliki fitur revert commit,yaitu fitur untuk membatalakan commit yg sudah kita lakukan,dengan cara membuat commit baru yg membatalkan commit sebelumnya
  - misal,kita sudah melakukan commit data perubahan dari text angger menjadi vindi,jika kita revert sevara otomatis akan membuat commit baru dengan melakukan perubahan dari vindi ke angger (MELAKUKAN KEBALIKAN DARI COMMIT YG KITA LAKUKAN)
  - untuk melakukan revert commit,gunakan perintah
  - git revert hash(7digit) (buka text editor) biasa digunakan untuk rename file
  
- BLAME
+ 7. BLAME
   - saat kita menambahkan kode program,kadang kita ingin tahu siapa yg menambahkan baris kode program
   - Git memiliki fitur yg bernama blame,ini digunakan untuk mencari tahu siapa yg menambah perubahan pd file dan juga untuk mengetahui commitnya
   - gunakan perintah 
   - git blame namFile
   - jikam ingin melihat lebih detail  git show hash(yg ada diGitBlame)
   
- ALIAS
+8. ALIAS
  - Git memiliki fitur yg bernama alias
  - dengan alias,kita bisa menambah nama perintah lain untuk perintah yg sudah ada di git
  - misal kita bisa menambah perintah graph yg sudah kita buat sendiri
@@ -64,19 +64,19 @@ AMEND COMMIT
  - alias hanya akan berlaku pada saat membuka gitbash saat itu,jika kita close maka kita alias sebelumnya tdk bisa dijalankan
 FILE yag disimpan dalam github max 500mb
 
-A. Istilah pada Git
-  1. repo folder project kita 
-  2. commit = rekaman atau snapsot dari repo kita
+9. Istilah pada Git
+  a. repo folder project kita 
+  b. commit = rekaman atau snapsot dari repo kita
     commit dilakukan stelah kita membuat dan melakukan perubahan pada source code sebelumnya
-  3. hash = penanda unik pada sebuah commit (hash berbentuk string random)
-  4. checkout = berpindah ke sebuah commit
-  5. branch = cabang bebas dari sebuah commit
+  c. hash = penanda unik pada sebuah commit (hash berbentuk string random)
+  d. checkout = berpindah ke sebuah commit
+  e. branch = cabang bebas dari sebuah commit
     Brancing biasanya dilakukan saat
     - Membuat git branch
     - Membuat snapshot(perubahan source code) tanpa mengganggu jalur utama(branch master)
     - Fitur experimental
     - 2 orang mengerjakan repo yang sama  
-  6. Merge
+  f. Merge
     Menggabungkan commit dari branch kembali ke branch master
    Recap Materi Branc da Merge
     - Branch = jalur development bebas dari sebuah commit (percabangan)
@@ -84,18 +84,19 @@ A. Istilah pada Git
     - pull request = meminta pemilik repo untuk MENGAMBIL perubahan yang telah kita lakukan
     - Merge = menggabungkan 2 buah branch 
     - Merge conflict = muncul saat baris yang sama diubah oleh 2 branch yg berbeda,kita harus solving memilih salah satu perubahannya
-B. FORK/Forking
+    
+10. FORK/Forking
     - membuat copy/duplikat dari repo orang lain(beserta historinya)
     - jembatan antara repo original dan duplikatnya
     - modifikasi terhadap repo original milik orang lain yang kita gunakan,tanpa mengganggu/mengganti repo originalnya
     - Berkontribusi terhadap repo orang lain (pull request)
     - Fork tdak sama dengan Clone
     
- BEKERJA DENGAN GIT
+11. BEKERJA DENGAN GIT
   Perintah yang ada di gitbash
-  1. git = memberikan rangkuman perintah/perintah yg ada di gitbash(githelp)
-  2. clear = akan menghilangkan isi dari terminal
-  3. git --version = untuk mengetahui versi git
+  a. git = memberikan rangkuman perintah/perintah yg ada di gitbash(githelp)
+  b. clear = akan menghilangkan isi dari terminal
+  c. git --version = untuk mengetahui versi git
     A. git commend local
     1. git init = digunakan untuk mengisialisasi repo git pada computer kita
     2. git add namaFile = untuk menambahka file ke staging area
@@ -126,7 +127,7 @@ B. FORK/Forking
      22. git branch --show-current = untuk mengetahui ada berapa branch pd repo kita
      23. 
       
-  4. pwd = untuk mengetahui anda berada diderectory mana
+  d. pwd = untuk mengetahui anda berada diderectory mana
       - untuk membuat folder menjadi repo git kita perlu masuk kedalam foldernya 
       - untuk mengethui didalam folder ada file apa saja gunakan perintas ls
       - masuk folder dengan, cd namaFolder
@@ -134,7 +135,7 @@ B. FORK/Forking
       - jika berhasil maka akan muncul brand (master)
       - buka folder didalam text editor
       - membuat file (html,css,js,dll)
-      - supaya git mengenali perubahan source code yg ada didalam repo,kita perlu melakukan
+    B.  - supaya git mengenali perubahan source code yg ada didalam repo,kita perlu melakukan
         1. ketik git status untuk mngetahui ada perubahan file apa saja
         2. tambahkan file ke staging area,dengan ketik add file namaFile atau bisa saja dengan add file . (semua file yg akan kita tambahkan ke stagging area)
         3. jika kita sudah terdaftar maka kita bisa commit,jikabelum kita perlu memasukkan name dan email menggunakan perintah git commit
@@ -144,27 +145,27 @@ B. FORK/Forking
         7. jika git status modified bukan untracked gita bisa langsung commit dengan menggunakan perintah
         git commit -am"penjelasan commit"
         
-B. MELAKUKAN BRANCH DAN MERGE PADA GIT
-   B1. BRANCH
+12. MELAKUKAN BRANCH DAN MERGE PADA GIT
+   A1. BRANCH
     perintah yang dapat digunakan pada gitbash
-    1. git branch = untuk menengetahui terdapat branch apa saja pd git
-    2. git brach namaBranch = untuk membuat branch baru (misal git branch dosen) artinya kita emaut branch dosen.
-    3.git checkout namaBranch = untuk berpindah branch (misal gitcheckout dosen) artinya kita kan berpindah ke branch dosen.
-    4. git log --all --decorate --oneline --graph = untuk melihat history dalam bentuk graph
-    5. alias = untuk membuat perintah kita sendiri yang isinya didalam adalah perintah bawaan dari gitbash,misal saat kita ingin melihat graph kita harus mengetik perintah yg lumayan panjang,kita bisa membuat perintah dengan kata kita sendiri dengan : 
+    a. git branch = untuk menengetahui terdapat branch apa saja pd git
+    b. git brach namaBranch = untuk membuat branch baru (misal git branch dosen) artinya kita emaut branch dosen.
+    c.git checkout namaBranch = untuk berpindah branch (misal gitcheckout dosen) artinya kita kan berpindah ke branch dosen.
+    d. git log --all --decorate --oneline --graph = untuk melihat history dalam bentuk graph
+    e. alias = untuk membuat perintah kita sendiri yang isinya didalam adalah perintah bawaan dari gitbash,misal saat kita ingin melihat graph kita harus mengetik perintah yg lumayan panjang,kita bisa membuat perintah dengan kata kita sendiri dengan : 
     alias graph="git log --all --decorate --oneline --graph" untuk memanggil kita ketik graph
-    6. git merge namaBranch = untuk menggabungkan branch
-    7. git branch --merged = untuk mengetahui branch apa saja yang telah dimerge(digabung)
-    8. git branch -d namaBranch = untuk menghapus branch yg telah dimerge dan tidak digunakan lagi (pastikan kita tdk dalam branch yg mau dihapus)
-    9. git branch -D namaBranch = untuk menghapus branch walaupun branch tersebut belum digunakan (pastikan kita tdk dalam branch yg mau dihapus)
-    10. git branch -m "namaBranchbaru" = untuk merename branch (pastikan kita dalam branch yg mau direname)
+    f. git merge namaBranch = untuk menggabungkan branch
+    g. git branch --merged = untuk mengetahui branch apa saja yang telah dimerge(digabung)
+    h. git branch -d namaBranch = untuk menghapus branch yg telah dimerge dan tidak digunakan lagi (pastikan kita tdk dalam branch yg mau dihapus)
+    i. git branch -D namaBranch = untuk menghapus branch walaupun branch tersebut belum digunakan (pastikan kita tdk dalam branch yg mau dihapus)
+    j. git branch -m "namaBranchbaru" = untuk merename branch (pastikan kita dalam branch yg mau direname)
     
    B2. MULTIPLE BRANCH
     - pada kenyataannya dalam develop aplikasi kita membuat branch yg sangat bnyak
     - git menangani dengan baik,walaupun kita membuat branch yang sangat banyak
     
   
-    B3. MERGE 
+  13 . MERGE 
      - Merge adalah proses dimana kita melakukan penggabungan dua buah branch
      - Merge biasanya dilakukan setelah kita selesai membuat kode program disebuah branch,da ingin menggabungkan fitur tersebut ke branch lain
        misal ke branch utama
@@ -172,7 +173,9 @@ B. MELAKUKAN BRANCH DAN MERGE PADA GIT
      - perhatikan  flow commit master,saat kita membuat banyak
      - kita bisa melakukan branch cabang dengan branch cabang,tdk harus cabang dengan master
      - dan pastikan jika kita ingin ngemerge dengan branch lain,kita berada di branch diluar dari branch yg kita tuju
-     
+     - misal,kita saat ini ada dibranch master
+     - git merge feature
+     - maka branch feature akan dimerge dengan brand master
     membuat BRANCH dan MERGE
     branch yg aktif ditandai dengan adanya tulisan HEAD
     1. membuatt repo
@@ -184,14 +187,30 @@ B. MELAKUKAN BRANCH DAN MERGE PADA GIT
     7. untuk melakukan MERGE ,pastikan kita berada pada branch MASTER
     8. ketik perintah git merge namaBranch
     
-    MENGATASI GIT MERGE CONFLICT
+  A1.  MENGATASI GIT MERGE CONFLICT
       Terjadi karena 2 branch mengerjakan baris yang sama dalam 1 repo,jika pada branch melakukan perubahan pada baris yang sama,maka akan terjadi conflick,jika tidak maka data akan update
+      - Dalam pembuatan aplikasi,biasanya programmer akan melakukan penambhan kode program direpo secara pararel
+      - biasanya tipa programer akan membuat branch masing-masing
+      - dan tdk bisa dihindari,kadang programer akan melakukan perubahan pada kdoe file yang sama dibranch yang berbeda
+      - dan biasanya ketika melakukan merge,akan terjadi yg namanya conflict
+      - hal ini disebabkan,satu file diubah dibranch yg berbeda,sehingga ketika dimerge,kita perlu melakukan yg namanya merge conflict
+      
+    A2.  MEMBATALKAN CONFLICT
+      - jika terjadi conflict maka kita wajib  memperbaikinya terlebih dahulu
+      - semua perubahan yg tdk konflik akan secara otomatis berada di staging index
+      - sedangkan perubahan yg konflik secara otomatis akan berada di working area
+      -  jika kita ingin membatalkan merge,kita bisa gunakan perintah
+      - git merge --abort
+      - secara otomatis semua perubahan  dibranch yg ingin kita merge  akan dihapus
+      
+   A3.   MEMPERBAIKI CONFLICT
      cara mengatasi
      1. kita bisa memilih bagian mana saja yang aka kita ambil
      2. yang warna hijau adalah branch yg aktif,sedangkan yg warna biru adalah branch yg akan dimerge
-     3. lakukan commit agar masuk ke staging area
+     3. lakukan git add . agar masuk ke staging area
+     4. lakuka git commit -m "" agar disimpan didalam repo
      
-   MELAKUKAN CHECKOUT KE SEBUAH COMMIT
+14.   MELAKUKAN CHECKOUT KE SEBUAH COMMIT
     1. Dilakuka untuk mundur beberapa commit
     2. lakukan git log untuk mengetahui hash pd saat commit
     3. ambil hast 7 digit pd commit yg kita ingin masuki
@@ -203,8 +222,13 @@ B. MELAKUKAN BRANCH DAN MERGE PADA GIT
     9. jika ingin menyimpan perubahannya,maka anda harus membuat branch baru untuk menyimpan perubahan dan saat melakukan perubahan branch
         anda akan mendapatkan hash untuk menambahkan pada akhir branch,jika file yang anda rubah mengerjakan baris yang sama terhdap brand master akan 
         menjadi merge conflict,anda harus resolve manual
+    
+ 15. CHERRY-PICK
+  -Kadang ada kasus,ketika kita membuat kode program disebuah branch kita ingin melakukan merge,namun tdk ingin melakukan merge semua branchnya,mungkin haya sebagian commit saja
+  - cherry-pick merupakan fitur yang digunakan untuk mengambil commit dari branch manapun dan kita merge ke dalam branch saat ini
+  - ketik git cherry-pick hash7DigitCommitPdBranchYgDituju
         
-C. GIT REMOTE
+16. GIT REMOTE
 perintah yg bisa digunakan
     - git clone namaUrl = untuk mengarahkan folder tersebut aka mengeclone sesuai dengan namaUrl yg ada di github
     - git remote = untuk mengetahui apakah sudah terhubung dengan repo yg ada digithub ,jika keterangan ORIGIN maka sudah terhubung
@@ -213,7 +237,7 @@ perintah yg bisa digunakan
     - git fetch = untuk mengetahui perubahan apa saja yg ada diremote
     - git pull = untuk mengambil perubahan yg ada diremote agar dilocal ikut berubah
     
-   MELAKUKAN CLONE
+17.   MELAKUKAN CLONE
       - Buat folder untuk menampung repo (folder penampung jngan dibuat repo)
       - git clone urlRepoGitYgAdaDiGithub
       - masuk kedalam repo yg telah diclone
@@ -224,7 +248,8 @@ perintah yg bisa digunakan
     
     aRTINYA REPO KITA DISIMPAN KEDALAM GITHUB 
     jika kita menggunakan git remote artinya kita menduplikat repo kita dan disimpan kedalam github ataupun sebaliknya
-    1. KETIKA PADA GITHUB KITA SUDAH MEMPUNYAI REPO,DAN DI KOMPUTER LOCAL KITA BELUM MEMPUNYAI,Maka kita dapat menduplikat repo yang ada digithub dengan cara (Cloning)
+   
+ 18. KETIKA PADA GITHUB KITA SUDAH MEMPUNYAI REPO,DAN DI KOMPUTER LOCAL KITA BELUM MEMPUNYAI,Maka kita dapat menduplikat repo yang ada digithub dengan cara (Cloning)
     - memuat repo baru pd github
     - pastikan click readme
     - click clone or download
@@ -240,7 +265,7 @@ perintah yg bisa digunakan
     - jika belum pd local ketik git push untuk mendorong agar branch yg da diremote sejajar dengan branch local
     - cek status dan graph untuk emmantau perubahan ,dan refresh github
     
-2. KETIKA KITA PUNYA REPO DILOCAL DAN KITA INGIN COMMIT DAN MASUKKAN REPO KE DALAM GITHUB (Remote)
+ 19 . KETIKA KITA PUNYA REPO DILOCAL DAN KITA INGIN COMMIT DAN MASUKKAN REPO KE DALAM GITHUB (Remote)
 - buat folde di local dan jadikan repo 
 - buat repo di github 
 - pastikan jangan diclick readme nya
@@ -248,7 +273,7 @@ perintah yg bisa digunakan
 - menambahkan remote ke gitbash (sudah ada di quick tip)
 - lakukan git fetch untuk mengecek perubahan yg ada di remote
 
-3. KETIKA TERJADI CONFLICK LOCAL DAN REMOTE
+20. KETIKA TERJADI CONFLICK LOCAL DAN REMOTE
     Terjadi jika pada local dan remote melakuka perubahan dibaris yang sama
    - gunakan git fetch untuk mengetahui sudah sampai mana commit yg ada di remote
    - git status untuk mengetahui keterangan
@@ -256,7 +281,7 @@ perintah yg bisa digunakan
    - jika tdk dipull maka pada graph akan melakukan branch,
    - setelah conflick selesai maka gunakan perintah git push agar branch local dan remote sejajar
    
- D. GITHUB PAGES
+ 21. GITHUB PAGES
     Memanfaatkan github untuk menghosting web statis (web yg tdk memilik data base)
   1. buat repo pada github
   2. pada saat membuat repo dibelakang harus diberi nama github.io
@@ -265,7 +290,7 @@ perintah yg bisa digunakan
   5. check pd github, bagian setting pilih fitur pages ,lalu ubah none menjadi master/main lalu save ,refresh, maka github akan menampilkan url hostingnya 
   6. Dan jika ingin melakukan perubahan maka,kita commit ke local lalu ketik git push ,agarrepo yg ada digithub akan ikut berubah
   
- F. REMOTE MULTIPLE
+ 22. REMOTE MULTIPLE
       Biasa digunakan untuk kolaborasi team,Agar repo yg ada digithub dilocal dan digithub orang lain yg reponya kita fork sinkron (berintegrasi)
       Misal kasus kita ingin mnengambil repo  orang lain(fork) dan clone ke komputer kita (local) dan di akun github kita
       BERLAKU JIKA REPO SUMBER MELAKUKAN PERUBAHAN,MAKA OTOMATIS REMOTE AKAN MAJU 1 COMMIT DARI REPO LOCAL DAN GITHUB KITA
@@ -292,7 +317,7 @@ perintah yg bisa digunakan
       - agar repo yg ada digithub kita ikut berubah maka kita 
       - ketik git push -u origin master 
     
-    G. JIKA YANG MENJADI REMOTE ADALAH REPO YANG ADA DIGITHUB KITA
+  23.  JIKA YANG MENJADI REMOTE ADALAH REPO YANG ADA DIGITHUB KITA
           - maka jika kita ingin mengecek perubahan yg ada pd repo github
           ketik git fetch
           - jika DIDALAM REPO GITHUB melakukan perubahan maka,kita harus
@@ -300,7 +325,7 @@ perintah yg bisa digunakan
           - DAN JIKAKITA MELAKUKA PERUBAHAN YANG ADA DILOCAL
           - ketik git push ,agar repo yg ada digithub ikut berubah
           
-    H. PULL REQUEST
+  24. PULL REQUEST
           Biasa dilakukan jikakita melakukan perubahan repo hasil fork dari repo orang lain,dan kita ingin mengajukan perubahan yg ada direpo local atau github kita ke repo sumber
           JIKA kita ingin melakukan perubahan pada repo hasil fork,MAKA kita jngan melakukan perubahan pada branch master,kita mengubah dibranch lain,agar branch master kita tetap utuh,dan jika perubahan kita  sudah fiks ingin dimasukkan ke branch master maka gunakan git merge dan kita melakukan pull request menggunakan branch lain yg telah kita buat(agar isi dr branch master utuh)
           - buat branch baru , git branch namaBranchBaru
@@ -319,12 +344,12 @@ perintah yg bisa digunakan
           - lalu lakukan git merge namaRemoteRepoSumber/master, maka repo local kita akan update sesuai dengan repo sumber
           - ketik git push origin master, agar repo yang ada digithub update sesuai dengan repo local ata repo sumber
           
- I . GITIGNORE
+ 25 . GITIGNORE
     gitignore adlah sebuah file yg bisa kita simpan kedalam repo kita (local maupun remote(menggunakan github)) agar kedepannya,saat kita melakukan add dan commit(perubahan source code) ,ada file yg kita daftarkan ke file.gitignore agar saat melakuka commit ataupun add file yg telah didaftarka ke .gitignore tidak ikut berubah
   misal
      - agar file system tdk ikut berubah jika kita melakukan add dan commit
      - didalam repo kita terdapat konfigurasi pd local (komputer kita),
-  CARA MEMBUAT FILE GITIGNORE SECARA MANUAL
+   A1. CARA MEMBUAT FILE GITIGNORE SECARA MANUAL
    - kita buat dilocal 
    - di vs code buat file .gitignore
    - didalmnya kita bisa mendaftarkan file,folder
@@ -333,7 +358,7 @@ perintah yg bisa digunakan
    - atau jika semua file dan ekstensi (*.namaekstensi)
    - setelah kita membuat file .gitignore maka file yg didaftarkan ke dala file .gitignore tdk akan muncul diremote (repo github)
    
-   CARA MEMBUAT FILE GITIGNORE PD GITHUB
+  A2. CARA MEMBUAT FILE GITIGNORE PD GITHUB
     - kita bisa membuat langsung digithub,saat kita membuat repo pd github
     
    - website referensi file gitignore diisi apa (github.com/github/gitignore)
