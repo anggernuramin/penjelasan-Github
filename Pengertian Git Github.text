@@ -18,6 +18,50 @@ DELETE FILE
   - git commit -m ""
   - untuk konfirmasi/memberitahu pd repo
 
+AMEND COMMIT
+ - kadang saat kita melkukan commit,ada beberapa hal yg terlupakan
+ - biasanya kita melakukan reset soft ke commit,lalu tambahka perubahan yg terlupakan,lalu commit ulang
+ - Hal tersebut bisa dilakukan tanpa manual melakukan reset,caranya bisa menggunakan 
+ - git commit amend -m""
+ - perintah diatas akan mengubah commit sebelumnya,tidak membuat commit baru melainkan mengubah 
+ - amend akan mengubah hast commit karena data perubahan yg dicommit berubah
+ 
+ VERSI SEBELUMNYA
+ - Git memiliki fitur dimana kita bisa melihat versi file pd commit sebelumnya
+ - saat kita ambil versi file sebelumnya,file pd commit tersebut akan berada di staging index
+ - untuk melakukan kita bisa gunakan
+ - git checkout hash(7Digit) namafile
+ - jika ingin menambhakan maka gunakan git add
+ - jika tdk dan ingin kembali git restore --staged namafile (kita pindah ke working area terlebih dahulu)
+ - git restore namafile
+ 
+ SNAPSHOT SEBELUMNYA
+ - Git juga memiliki fitur seperti mesin waktu,dimana kita bisa kembali pd snapshot sebelumnya
+ - kita bisa tentukan kemana tujuan snapshot kita,dengan menggunakan hash commit
+ - gunakan oerintah
+ - git checkout hash(7Digit) (lngsung diarahkan ke code editor) 
+ - jika ingin menambahkan perubahan gunakan git add . dan git commit -m ""
+ - Dan jika ingin kembali ke commit paling awal,kita bisa gunakan perintah git checkout namabranch
+ 
+ REVERT COMMIT
+ - Git memiliki fitur revert commit,yaitu fitur untuk membatalakan commit yg sudah kita lakukan,dengan cara membuat commit baru yg membatalkan commit sebelumnya
+ - misal,kita sudah melakukan commit data perubahan dari text angger menjadi vindi,jika kita revert sevara otomatis akan membuat commit baru dengan melakukan perubahan dari vindi ke angger (MELAKUKAN KEBALIKAN DARI COMMIT YG KITA LAKUKAN)
+ - untuk melakukan revert commit,gunakan perintah
+ - git revert hash(7digit) (buka text editor) biasa digunakan untuk rename file
+ 
+ BLAME
+  - saat kita menambahkan kode program,kadang kita ingin tahu siapa yg menambahkan baris kode program
+  - Git memiliki fitur yg bernama blame,ini digunakan untuk mencari tahu siapa yg menambah perubahan pd file dan juga untuk mengetahui commitnya
+  - gunakan perintah 
+  - git blame namFile
+  - jikam ingin melihat lebih detail  git show hash(yg ada diGitBlame)
+  
+ ALIAS
+ - Git memiliki fitur yg bernama alias
+ - dengan alias,kita bisa menambah nama perintah lain untuk perintah yg sudah ada di git
+ - misal kita bisa menambah perintah graph yg sudah kita buat sendiri
+ - 
+ - alias hanya akan berlaku pada saat membuka gitbash saat itu,jika kita close maka kita alias sebelumnya tdk bisa dijalankan
 FILE yag disimpan dalam github max 500mb
 
 A. Istilah pada Git
@@ -58,13 +102,14 @@ B. FORK/Forking
     3. git status = untuk mengetahui status repo kita (misal ada filebaru atau tidak,file terhapus dll)
     4. git commit -m= untuk melakuka commit
     5. git config = untuk configurasi pada git 
-    6. git branch namaBranch=  untuk membuat branch
+    6a. git branch namaBranch=  untuk membuat branch
+    6b. git branch 
     7. git rm --cached = untuk merove file saat stagging area dan tidak jadi commit
     8. git commit -m"pesan commit"
     9. git log = untuk melihat history comit yang pernah kita lakukan
     9a. git log --oneline = untuk melihat history teteapi ditampilka secara simpel didalam satu baris
     10. git log -3 = untuk melihat 3 history commit terakhir
-    11.  git log -- namaFile = untuk melhat perubahan secara spesifik pd file tertentu
+    11. git log --namaFile = untuk melhat perubahan secara spesifik pd file tertentu
     12. git checkout kodeHash5digit -- namafile = untuk mengembalikan perubahan commit ,misal file yg terhapus 
         misal git checkout 1b23v -- style.css ,Dan hasilnya akan ke staging area ,kita perlu commit 
      13. q = untuk quit ,digunakan setelah melkaukan perintah git log
@@ -76,6 +121,10 @@ B. FORK/Forking
           dan mengubah file,kita hnya dapat mengubah di working area,jika kita terlanjut menambahkan ke staging area,maka gunakan perintah ini untuk kembali ke working area)
      19. git alias graph="git log --all --decorate --oneline --graph" = digunakan untuk membuat alias perintah grap (perintah graph untuk melihatkan hubungan commit sebelum dan sesudahnya)
      20. git show hash7Digit = digunakan untuk melihat detail,kita melakuka perubahan apa dalam file tersebut 
+     21a. git diif hash1(7digit) hash2(7digit) = digunakan untuk melakukan perbandingan commit
+     21b. git difftool hash1(7digit) hash2(7digit) = digunakan untuk melakukan perbandingan commit (menampilka dalam terminal vs code)
+     22. git branch --show-current = untuk mengetahui ada berapa branch pd repo kita
+     23. 
       
      
      
