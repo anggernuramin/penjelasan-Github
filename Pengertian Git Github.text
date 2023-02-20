@@ -126,9 +126,6 @@ B. FORK/Forking
      22. git branch --show-current = untuk mengetahui ada berapa branch pd repo kita
      23. 
       
-     
-     
-     
   4. pwd = untuk mengetahui anda berada diderectory mana
       - untuk membuat folder menjadi repo git kita perlu masuk kedalam foldernya 
       - untuk mengethui didalam folder ada file apa saja gunakan perintas ls
@@ -148,6 +145,7 @@ B. FORK/Forking
         git commit -am"penjelasan commit"
         
 B. MELAKUKAN BRANCH DAN MERGE PADA GIT
+   B1. BRANCH
     perintah yang dapat digunakan pada gitbash
     1. git branch = untuk menengetahui terdapat branch apa saja pd git
     2. git brach namaBranch = untuk membuat branch baru (misal git branch dosen) artinya kita emaut branch dosen.
@@ -157,9 +155,24 @@ B. MELAKUKAN BRANCH DAN MERGE PADA GIT
     alias graph="git log --all --decorate --oneline --graph" untuk memanggil kita ketik graph
     6. git merge namaBranch = untuk menggabungkan branch
     7. git branch --merged = untuk mengetahui branch apa saja yang telah dimerge(digabung)
-    8. git branch -d namaBranch = untuk menghapus branch yg telah dimerge dan tidak digunakan lagi
-    9. git branch -D namaBranch = untuk menghapus branch
+    8. git branch -d namaBranch = untuk menghapus branch yg telah dimerge dan tidak digunakan lagi (pastikan kita tdk dalam branch yg mau dihapus)
+    9. git branch -D namaBranch = untuk menghapus branch walaupun branch tersebut belum digunakan (pastikan kita tdk dalam branch yg mau dihapus)
+    10. git branch -m "namaBranchbaru" = untuk merename branch (pastikan kita dalam branch yg mau direname)
     
+   B2. MULTIPLE BRANCH
+    - pada kenyataannya dalam develop aplikasi kita membuat branch yg sangat bnyak
+    - git menangani dengan baik,walaupun kita membuat branch yang sangat banyak
+    
+  
+    B3. MERGE 
+     - Merge adalah proses dimana kita melakukan penggabungan dua buah branch
+     - Merge biasanya dilakukan setelah kita selesai membuat kode program disebuah branch,da ingin menggabungkan fitur tersebut ke branch lain
+       misal ke branch utama
+     - saat kita melakukan merge ,branch tdk akan di hapus ,artinya kita masih bisa melakukan commit dibranch yg ada
+     - perhatikan  flow commit master,saat kita membuat banyak
+     - kita bisa melakukan branch cabang dengan branch cabang,tdk harus cabang dengan master
+     - dan pastikan jika kita ingin ngemerge dengan branch lain,kita berada di branch diluar dari branch yg kita tuju
+     
     membuat BRANCH dan MERGE
     branch yg aktif ditandai dengan adanya tulisan HEAD
     1. membuatt repo
