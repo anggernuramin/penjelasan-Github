@@ -229,13 +229,110 @@ FILE yag disimpan dalam github max 500mb
   - ketik git cherry-pick hash7DigitCommitPdBranchYgDituju
         
 16. GIT REMOTE
-perintah yg bisa digunakan
+     - Saat nanti kita bekerja dengan tim atau berkolaborasi ,kita tdk hanya akan memnyimpan git repo pada satu komputer saja
+     - Tiap anggota mungkin akan mengcopy git repo yang kita buat,dan juga melakukan kontribusi ke ke git repositorya saja 
+     - Karean git meripakan distributed version control,walaupun kita gunakan git server tapi kita tidak wajib terkoneksi ketika ingin mengelola git repo
+     - hanya ketika ingin mengirim perubahan atau mengambil perubahan,baru kita butuh terkoneksi ke git server
+   16A. perintah yg bisa digunakan
     - git clone namaUrl = untuk mengarahkan folder tersebut aka mengeclone sesuai dengan namaUrl yg ada di github
     - git remote = untuk mengetahui apakah sudah terhubung dengan repo yg ada digithub ,jika keterangan ORIGIN maka sudah terhubung
     - git remote -v = untuk mngetahui remote kita terhubung dengan akun repo github siapa
     - git push = untuk mendorong branch,biasa dilakukan untuk mendorong branck remote agar sejajar dengan branch local,saat branch local mengalamai perubahan
     - git fetch = untuk mengetahui perubahan apa saja yg ada diremote
     - git pull = untuk mengambil perubahan yg ada diremote agar dilocal ikut berubah
+    
+    16B. GIT SERVER
+          - Git server adalah server yg bsa kita gunakan untuk menyimpan repo git yg sudah jkita buat dilocal 
+          - Ada bnyak sekali git serveryg tersedia ,baik itu yang gratis atau ataupun berbayar,contoh git server (github,gitlab,gitbucket)
+          - Kelebiha ika menggunakan git server adalah data repo aman tersimpan di server,sehingga jika kita hapus git repo yg dilocal,repo akan tetap aman diserver
+     
+     16C. GIT SERVER REPOSITORY 
+         - Tiap git server biasanya memiliki fitur membuat git repo
+         - todak wajinb kita harus membuat git repo dilocal dulu,ataupun membuat gi repo di git server
+         
+      16D. SSH
+          - ssh adalah singkatan dari Secure Shell
+          - sshmerupakan protokol jaringan untuk komunikasi jaringan yang aman danterenskripsi
+          - ssh merupakan aplikasi berbasis terminal
+          - ketika kita menginstal git,secara otomatis git akan menginstal ssh juga
+          
+       16E. GIT SSH
+            - Git sendiri melmiliki bebrapa mekanisme untuk berkomunikasi dengan git server,seperti http atau ssh
+            - hal ini karena ssh merupakan protokol yg direkomendasika ketika berkomunikasi dengan git server
+            1. SSH KEY
+               - Hal pertama yg perlu kita lakukan ketika menggunakan shh adalah,membuat ssh key
+               -ssh merupakan kunci yg bisa digunakan untuk autentikasi ke ssh server 
+               - untuk membuat ssh key,kita bisa gunakan perintah
+               - ssh--keygen diterminal
+               - lalu buat password
+               - setelah selesai ,maka secara otomatis aka terdapat 2 key dilocal,yaitu private dan public
+               - kita  bisa melihatnya didalam folder .ssh dihome directory kita
+               - file id_rsa adalah private key
+               - file id.rsa_pub adalah public key
+            
+            2. MENAMBAH SSH PUBLIC KEY DI GITHUB
+                - Setelah kita membuat ssh key,selajutnya kit perlu meregritrasikan ssh public key github 
+                - hal ini dilakukan,agar ketika nanti terkoneksi di git server digithub,kita tdk perlu melakukan autentikasi lagi
+                - ubah pd github.com/settings/keys
+                
+            3. TES SSH KE GITHUB
+               - selanjutnya untuk memastikan apakah kita sudajh bisa terkoneksi ke github mengguakan ssh kita bisa gunakan perintah
+               - ssh -T git@github.com
+               - jika berhasil maka akan muncul username kita yg ada diakun github
+               
+       16F. REMOTE REPOSITORY
+           - Ketika kita menggunakan git project secara default,git tdk tahu tentang remote repository
+           - kita perlu memberi tahu ke git project yg sudah kita buat tentang lokasi git repo
+           1. MENAMBAH REMOTE REPOSITORY
+               -  untuk meambahkan remote repo,kita bisa gunakan perintah
+               - git remote add namassh-url-yg-kita-peroleh-di-repo-git-server
+               -kebanyakan kita menamakan git remote dengan nama origin(terserah mau menamakan apa saja)
+               - git remote get-url namaRemote = digunakan untuk mengetahui nama url
+            2. MENGHAPUS REMOTE REPOSITORY
+               - Untuk menghapus remote repo,kita bisa gunakan perintah
+               - git remote rm namaRemote
+               
+      16G. PUSH
+            - walaupun kita sudah menyimpan perubahan digit project local tapi kita tidak secara otomatis akan sync dengan remote repo
+            - oleh karena itu,jika kita ingin mengirim perubahan yg terjadi di git project di local kita,kita perlu mengirim secara manual ke git server
+            - untuk mengirim perubahan di local ke git server ,kita bisa gunakan perintah
+            - git push namaRemote namaBranch
+           1. PUSH BRANCH
+              - Untuk mengirim perubahan branch ke remote repo dengan nama branch sama
+              - git push namaRemote namaBranch
+              - untuk mengirim perubahan branch ke remote repo dengan nama branch yg berbeda,kita bisa gunakan perintah
+              - git push namaRemote localbranch:remotebranch
+              - dilakukan jikanambranch local da remote berbeda
+              
+           2. PUSH SEMUA BRANCH
+               - jika kita ingin mengirim semua perubahan disemua branch ke remote repo,kita bisa gunkan perintah
+               - git push origin --all
+               
+           3. MENGHAPUS BRANCH (branch pd remote)
+             - perintah push juga bisa digunakan untuk menghapus branch yg ada diremote
+             - kita bisa gunakan perintah 
+             - git push --delete namaRemote namabranch
+             - PERLU DIINGAT, menghapus remote branch bukan berarti menghapus branch dilocal,jika kita ingin menghapus dilocal,kita harus lakukan secara manual
+           
+      16H. CLONE
+        - melakukan download projet git yg ada di server
+        denga perintah git clone
+        - kita bisa sownload project diremote repo ke local dan secara otomatis didownload sebagai project
+        1. MELAKUKAN CLONE
+          - Untuk melakukan clone,kita bisa gunakan perintah
+          - git clone urlRemote
+          - secara default clone akan membuat project dengan nama folder sama dengan nama project yg ada diremote
+          - jik kita ingin melakukan clone,dengan nama folder yg berbeda dengan nama project remote,kita bisa gunakan perintah
+          - git clone urlRemote namaFolder
+          
+         2. DEFAULT HASIL CLONE
+           - Default clone nama remote nya dalah origin
+           - dan akan berisi branch utama di remote repo
+           - branch yang lain tidak akan didownload
+           
+         3. 
+             
+         
     
 17.   MELAKUKAN CLONE
       - Buat folder untuk menampung repo (folder penampung jngan dibuat repo)
