@@ -285,7 +285,7 @@ FILE yag disimpan dalam github max 500mb
            - kita perlu memberi tahu ke git project yg sudah kita buat tentang lokasi git repo
            1. MENAMBAH REMOTE REPOSITORY
                -  untuk meambahkan remote repo,kita bisa gunakan perintah
-               - git remote add namassh-url-yg-kita-peroleh-di-repo-git-server
+               - git remote add namaRemote namassh-url-yg-kita-peroleh-di-repo-git-server
                -kebanyakan kita menamakan git remote dengan nama origin(terserah mau menamakan apa saja)
                - git remote get-url namaRemote = digunakan untuk mengetahui nama url
             2. MENGHAPUS REMOTE REPOSITORY
@@ -307,6 +307,7 @@ FILE yag disimpan dalam github max 500mb
            2. PUSH SEMUA BRANCH
                - jika kita ingin mengirim semua perubahan disemua branch ke remote repo,kita bisa gunkan perintah
                - git push origin --all
+               - digunakan juga ketika kita dilocal melakukan perubahan dibranch(selain master),agar repo remote ikut berubah
                
            3. MENGHAPUS BRANCH (branch pd remote)
              - perintah push juga bisa digunakan untuk menghapus branch yg ada diremote
@@ -460,5 +461,20 @@ FILE yag disimpan dalam github max 500mb
     
    - website referensi file gitignore diisi apa (github.com/github/gitignore)
    (gitignore.io) sesuaikan dengan framework yg kita pakai
-        
+       
+26. REBASE
+   - Rebase sering digunakan jika kita berkolaborasi dengan team (dengan rebase akita kaa memudahkan melakuka tracking)
+   - selalu buat branch baru ,agar brand master tidak akan terganggu
+   - sebelum melkuakn rebase ke remote master
+   - lakukan git pull
+   - lakukan perintah diatas dibranch master local kita
+   - untuk mengetahui perubahan yg ada diremote master
+   
+   1. PERINTAH REBASE
+      - git rebase namaBranchYgDituju
+   - Work flow pada saat menggabungkan branch ada dua cara (merge dan rebase)
+   - jika menggunakan REBASE,branch yg baru ketika akan dimerge dengan branch master(tdk harus dengan master) 
+   - maka otomatis akan memposisikan commit yg paling akhir
+   - dengan rebase maka akan melakuka fast-forward (tdk akan melakukan commit baru saat menggbungka branc)
     
+   
